@@ -21,7 +21,7 @@
 }
 </style>
 <body>
-<div class="container-fluid" style="background-color:#F54376;color:#fff;height:120px;">
+<div class="container-fluid" style="background-color:#F44336;color:#fff;height:120px;">
   <h1>CECI Report</h1>
 </div>
 
@@ -31,8 +31,11 @@
         <li class=""><a href="" class="glyphicon glyphicon-triangle-left" onclick="history.go(-1);">Back</button></a></li>
         <li class="active"><a href="{{url('/')}}"><span class="glyphicon glyphicon-home home"></span> Home</a></li>
         @if (Auth::guest())
-            <li><a href="{{ url('/login') }}">Login</a></li>
+            
             <li><a href="{{ url('/register') }}">Volunteer Form</a></li>
+            <li><a href="{{ url('/reports') }}">Month Report</a></li>
+            <li><a href="{{ url('/login') }}">Login</a></li>
+
         @else
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

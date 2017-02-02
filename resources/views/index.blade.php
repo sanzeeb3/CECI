@@ -1,6 +1,6 @@
 @extends('main')
 
 @section('content')
-here we go...
+<h1>Under Construction!</h1>
 
 @endsection

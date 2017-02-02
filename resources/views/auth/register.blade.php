@@ -55,7 +55,7 @@
 
 
                         <div class="form-group{{ $errors->has('contract_end_date') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Contract Start Date</label>
+                            <label for="name" class="col-md-4 control-label">Contract End Date</label>
 
                             <div class="col-md-6">
                                 <input id="contract_end_date" type="date" class="form-control" name="contract_end_date" value="{{ old('contract_end_date') }}" required autofocus>
@@ -67,22 +67,31 @@
                                 @endif
                             </div>
                         </div>
+                        
 
-                        <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                              <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">HTML</a></li>
-                                    <li><a href="#">CSS</a></li>
-                                    <li><a href="#">JavaScript</a></li>
-                                </ul>
+                        <div class="form-group{{ $errors->has('partner_organization') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Partner Organization</label>
+
+                            <div class="col-md-6">
+                                <select id="partner_organization" class="form-control" name="partner_organization" value="{{ old('partner_organization') }}" required autofocus>
+                                    <option value="">--Select Partner Organization--<br>
+                                    <option value="1">A<br>
+                                    <option value="2">B<br><br><br>                                  
+                                </select>
+                                
+                                @if ($errors->has('partner_organization'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('partner_organization') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
-
+                        
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">Username</label>
 
                             <div class="col-md-6">
-                                <input id="username" type="email" class="form-control" name="username" value="{{ old('username') }}" required>
+                                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" required>
 
                                 @if ($errors->has('username'))
                                     <span class="help-block">
