@@ -14,4 +14,4 @@
 Route::get('/', 'CeciController@index');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'CeciController@home');
