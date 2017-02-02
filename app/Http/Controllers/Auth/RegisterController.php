@@ -75,6 +75,7 @@ class RegisterController extends Controller
             'partner_organization' => $data['partner_organization'],            
             'username' => $data['username'],
             'password' => bcrypt($data['password']),
+            'is_admin'=> 0,
         ]);
     }
 }

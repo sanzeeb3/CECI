@@ -5,12 +5,12 @@
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="{{asset('jquery.min.js')}}"></script>
-<script src="{{asset('jquery.validate.min.js')}}"></script>
-<link href="{{asset('bootstrap/css/bootstrap.css')}}" rel="stylesheet">
-<script src="{{asset('bootstrap/js/bootstrap.js')}}"></script>
-<link href="{{asset('sweetalert.css')}}" rel="stylesheet">
-<script src="{{asset('sweetalert.js')}}"></script>
+<script src="{{asset('public/jquery.min.js')}}"></script>
+<script src="{{asset('public/jquery.validate.min.js')}}"></script>
+<link href="{{asset('public/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+<script src="{{asset('public/bootstrap/js/bootstrap.js')}}"></script>
+<link href="{{asset('public/sweetalert.css')}}" rel="stylesheet">
+<script src="{{asset('public/sweetalert.js')}}"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
 </head>
