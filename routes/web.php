@@ -10,8 +10,9 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
-Route::get('/', 'CeciController@index');
 Auth::routes();
 
-Route::get('/home', 'CeciController@home');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/', 'CeciController@index');
+    Route::get('/home', 'CeciController@index');
+});

@@ -28,12 +28,11 @@
 <nav class="navbar navbar-inverse">
       <ul class="nav navbar-nav">
 
-        <li class=""><a href="" class="glyphicon glyphicon-triangle-left" onclick="history.go(-1);">Back</button></a></li>
-        <li class="active"><a href="{{url('/')}}"><span class="glyphicon glyphicon-home home"></span> Home</a></li>
+        <li class="active"><a href="{{url('/')}}"><span class="glyphicon glyphicon-home home"></span> Users Management</a></li>
+        <li><a href="{{ url('/reports') }}">Month Report</a></li>
         @if (Auth::guest())
-            
+        
             <li><a href="{{ url('/register') }}">Volunteer Form</a></li>
-            <li><a href="{{ url('/reports') }}">Month Report</a></li>
             <li><a href="{{ url('/login') }}">Login</a></li>
 
         @else
