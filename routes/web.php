@@ -17,5 +17,16 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'CeciController@index');
     Route::get('/home', 'CeciController@index');
     Route::get('/reports', 'CeciController@report');
-
 });
+
+Route::group(['middleware' => ['App\Http\Middleware\AdminMiddleware']], function () {
+			Route::get('/admin', 'CeciController@admin');
+        });
+
+
+Route::post('/edit/name', 'EditController@name');
+Route::post('/edit/dob', 'EditController@dob');
+Route::post('/edit/contract_start_date', 'EditController@contract_start_date');
+Route::post('/edit/contract_end_date', 'EditController@contract_end_date');
+Route::post('/edit/partner_organization', 'EditController@partner_organization');
+Route::post('/edit/username', 'EditController@username');
