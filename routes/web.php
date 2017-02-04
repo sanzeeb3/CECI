@@ -17,6 +17,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'CeciController@index');
     Route::get('/home', 'CeciController@index');
     Route::get('/reports', 'CeciController@report');
+    Route::post('/postReport', 'CeciController@postReport');
 });
 
 Route::group(['middleware' => ['App\Http\Middleware\AdminMiddleware']], function () {

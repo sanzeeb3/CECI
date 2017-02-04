@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use App\Report;
 
 class CeciController extends Controller
 {
@@ -23,5 +24,12 @@ class CeciController extends Controller
     public function report()
     {
     	return view('report');
+    }
+
+    public function postReport(Request $request)
+    {
+    	$report=Report::create($request->all());
+        $report->users()->attach(auth()->user()->id);
+        return redirect('/');
     }
 }

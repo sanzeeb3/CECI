@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2017 at 11:05 AM
+-- Generation Time: Feb 04, 2017 at 11:51 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -43,6 +43,13 @@ CREATE TABLE `reports` (
   `updated_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `reports`
+--
+
+INSERT INTO `reports` (`id`, `name`, `month`, `duration`, `q1`, `q2`, `q3`, `q4`, `q5`, `q6`, `q7`, `q8`, `created_at`, `updated_at`) VALUES
+(1, 'sdf', 'january', '2017-02-14', 'bvb', ' vbcx', 'sdfds hfgbn', 'sdf sdf', ' ddf vbdf', '6', '5', '4', '2017-02-04', '2017-02-04');
+
 -- --------------------------------------------------------
 
 --
@@ -53,6 +60,13 @@ CREATE TABLE `report_user` (
   `user_id` int(11) DEFAULT NULL,
   `report_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `report_user`
+--
+
+INSERT INTO `report_user` (`user_id`, `report_id`) VALUES
+(3, 1);
 
 -- --------------------------------------------------------
 
@@ -78,7 +92,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `dob`, `contract_start_date`, `contract_end_date`, `partner_organization`, `username`, `password`, `remember_token`, `is_admin`) VALUES
-(3, 'Ram Prasadf', '1995-07-13', '2017-02-15', '2017-02-28', '14', 'ramprasad', '$2y$10$oScPpcmFKepkdnHH0a4X2.aJuAkb.9SvOSUj5MagvrkEL.NebH.UC', 'yhPXfD45w9nMsg9CyL7cuaO46xMLWyb4kB2RlggYhb7pGYRPcWL3nXuPL17d', 1);
+(3, 'Ram Prasadf', '1995-07-13', '2017-02-15', '2017-02-28', '14', 'ramprasad', '$2y$10$oScPpcmFKepkdnHH0a4X2.aJuAkb.9SvOSUj5MagvrkEL.NebH.UC', 'qXzzvUVW8FOeNMWAkqMoDvUecqor1Y7otkMqKUwp8GzxYZeHrZssxpF0miDC', 0);
 
 --
 -- Indexes for dumped tables
@@ -104,7 +118,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `users`
 --

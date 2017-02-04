@@ -20,9 +20,9 @@
 
 </head>
 <style>
-#question
+.report td
 {
-	color:red;
+    width:30%;
 }
 </style>
 <body>

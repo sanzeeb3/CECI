@@ -14,8 +14,8 @@
 			<br><br>
 
 
-			<form method="POST" action={{url('/postReport)')}} role="form-control">
-
+			<form method="POST" action="{{url('/postReport')}}" role="form-control">
+			    {{ csrf_field() }}
  				<label for="name" class="col-md-4 control-label">Volunteer Name <b style="color:red">*</b></label>
  					<div class="col-md-6">
         				<input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
