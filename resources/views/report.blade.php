@@ -76,7 +76,7 @@
  					</div> 
  					<br><br>
 
- 				<label class="col-md-6 control-label">Number of women attended the training</label>
+ 				<label class="col-md-6 control-label">Number of men attended the training</label>
  					<div class="col-md-6">
         				<input type="text" class="form-control" name="q8" value="{{ old('q8') }}" autofocus>
  					</div><br><br><br><Br>
