@@ -9,12 +9,12 @@ class CeciController extends Controller
 {
     public function index()
     {
-    	return view('index');
+    	$name=Auth::user()->name;
+    	return view('index')->with('name',$name);
     }
 
-    public function home()
+    public function report()
     {
-    	$user=Auth::user()->name;
-    	return view('home')->with('user',$user);
+    	return view('report');
     }
 }

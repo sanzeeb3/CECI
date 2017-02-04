@@ -21,14 +21,14 @@
 }
 </style>
 <body>
-<div class="container-fluid" style="background-color:#F44336;color:#fff;height:120px;">
+<div class="container-fluid" style="background-color:#F44336;color:#fff;height:100px;">
   <h1>CECI Report</h1>
 </div>
 
 <nav class="navbar navbar-inverse">
       <ul class="nav navbar-nav">
 
-        <li class="active"><a href="{{url('/')}}"><span class="glyphicon glyphicon-home home"></span> Users Management</a></li>
+        <li class="active"><a href="{{url('/')}}"> Users Management</a></li>
         <li><a href="{{ url('/reports') }}">Month Report</a></li>
         @if (Auth::guest())
         

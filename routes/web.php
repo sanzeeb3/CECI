@@ -12,7 +12,10 @@
 */
 Auth::routes();
 
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'CeciController@index');
     Route::get('/home', 'CeciController@index');
+    Route::get('/reports', 'CeciController@report');
+
 });
