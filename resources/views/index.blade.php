@@ -14,7 +14,7 @@
     <div class="row">
         
         <div class="col-md-7">
-            <h3>Monthly Reports</h3>
+            <h3>Monthly Reports</h3><br>
         <div class="report">
         @foreach($user->reports as $report)
             <h5><b>Report for the month {{$report->month}}</b></h5>
@@ -29,9 +29,10 @@
             <tr><td>Number of women attended the training</td><td>{{$report->q7}}</td></tr>
             <tr><td>Number of men attended the training</td><td>{{$report->q8}}</td></tr>
             </table>
+            <br><br><br>
         @endforeach
         </div>
-        
+
         </div>
 
         <div class="col-md-5">
@@ -64,9 +65,6 @@ $('.contract_start_date').editable();
 $('.contract_end_date').editable(); 
 $('.partner_organization').editable(); 
 $('.username').editable();  
-
-
-    
 
 </script>
 

@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Auth;
 
-class AdminMiddleware
+class UserMiddleware
 {
     /**
      * Handle an incoming request.
@@ -18,11 +18,11 @@ class AdminMiddleware
     {
         if(Auth::check())
         {
-            if($request->user()->is_admin==1)
+            if($request->user()->is_admin==0)
             {
                return $next($request);
             }
-             return redirect('/');    
+             return redirect('/admin');    
         }
         else
         {
@@ -30,3 +30,4 @@ class AdminMiddleware
         }
     }
 }
+
